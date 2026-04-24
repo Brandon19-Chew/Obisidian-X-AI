@@ -1,0 +1,75 @@
+# 🏗️ Getting Started: Vaults and Notes
+
+The core concept in Obsidian is the Vault, which is just a folder on your computer where all your notes are stored as plain text files. This means you are never locked into the app; you can open your notes with any text editor.
+
+Create a Vault: When you first open the app, you'll be prompted to create a new vault. The location doesn't matter, as it can be moved later.
+
+Your First Note: Click the "New Note" icon. Notes are saved automatically as you type.
+
+# ✍️ Core Syntaxes: The Power of Linking and Markdown
+
+Obsidian uses Markdown for formatting and has a unique system for linking notes together.
+
+Feature	Syntax / Method	Use Case
+Internal Link	[[Note Name]]	The killer feature. Links to another note in your vault. If the note doesn't exist, it will be created.
+Embed File	![[Note Name]]	Embeds the content of one note inside another (great for reusing paragraphs or pulling in tables).
+External Link	[Text](URL)	Creates a standard hyperlink to a website.
+Callout	> [!note]
+> This is a callout.	Creates a styled, collapsible box for tips, warnings, or quotes.
+Tags	#topic or #project/status	A powerful way to categorize notes. You can use nested tags (e.g., #work/meeting) and search by them.
+Comments	%% This text is hidden %%	Text placed between %% will not appear in Reading View. Useful for leaving yourself notes or reminders.
+Basic Markdown Formatting
+
+Headings: # H1, ## H2, ### H3
+
+Emphasis: *Italic*, **Bold**, ***Bold+Italic***, ~~Strikethrough~~
+
+Lists: - Item, 1. Item
+
+Tasks: - [ ] Task not done, - [x] Task done
+
+⌨️ Essential Shortcuts
+Keyboard shortcuts help speed up your workflow significantly.
+
+Function	Windows / Linux	Mac
+Command Palette (Access all commands)	Ctrl + P	Cmd + P
+Quick Switcher (Jump to any note)	Ctrl + O	Cmd + O
+Search in all files	Ctrl + Shift + F	Cmd + Shift + F
+Bold text	Ctrl + B	Cmd + B
+Italic text	Ctrl + I	Cmd + I
+Open Graph View	Ctrl + G	Cmd + G
+Create a new note	Ctrl + N	Cmd + N
+Open Settings	Ctrl + ,	Cmd + ,
+🚀 Beyond the Basics: Key Concepts
+1. Graph View
+
+What it is: A visual map showing how your notes are connected.
+How to use it: Open it with Ctrl/Cmd + G. The dots are your notes; the lines are links. It helps you see clusters of topics or "orphan" notes that aren't connected to anything.
+
+2. Workspace Layout
+
+What it is: The arrangement of your notes on the screen. You can drag tabs to create side-by-side splits or pop notes out into separate windows.
+How to use it: You can save a specific layout (e.g., one pane for writing, one for research, another for tasks) and restore it later via the Command Palette.
+
+3. Community Plugins
+
+What they are: Add-ons built by the community to extend functionality significantly. They are managed in Settings under "Community plugins".
+Essential ones:
+Dataview: Turns your vault into a database. Query notes based on tags, dates, or frontmatter to generate dynamic tables and lists.
+Templater: Creates powerful templates for notes, allowing for dynamic variables and scripts.
+Tasks: A robust task management system for tracking to-dos across your entire vault.
+Calendar: Adds a calendar view to see and create daily notes.
+
+Methodology	Core Idea	How to implement in Obsidian
+Zettelkasten	Treat each note as a single, atomic idea. Link notes frequently to build a web of thought.	Use [[links]] constantly. Keep notes small and focused on one concept.
+PARA	Organize notes by actionability: Projects, Areas, Resources, Archives.	Create four main folders. Move notes from Projects to Archive when done.
+Daily Notes	Capture fleeting thoughts, tasks, and logs day by day.	Enable the "Daily notes" core plugin. Use with the Calendar plugin.
+
+👨‍💻 For Developers: The Obsidian API
+
+If you want to build your own plugin or integrate Obsidian with other tools, the app has a robust API.
+Core Modules: The main interfaces are Vault (for file management), Workspace (for UI panes), and MetadataCache (for cached data about your notes).
+Plugin Structure: A plugin requires a manifest.json file for metadata and a main.js file that exports a class extending Plugin.
+Key Capabilities: You can add ribbon icons, status bar items, global commands, settings tabs, and register your own custom views.
+File Management: For plugin developers, the FileManager class handles safe renaming and moving of files, while the DataAdapter provides lower-level access for reading and writing binary and text files.
+Obsidian is a tool that grows with you—from simple note-taking to building a personal knowledge management system. The best way to learn is to start creating notes and linking them together.
