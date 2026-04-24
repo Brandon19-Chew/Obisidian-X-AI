@@ -1,4 +1,4 @@
-# 🏗️ Getting Started: Vaults and Notes
+# Getting Started: Vaults and Notes 🏗️ 
 
 The core concept in Obsidian is the Vault, which is just a folder on your computer where all your notes are stored as plain text files. This means you are never locked into the app; you can open your notes with any text editor.
 
